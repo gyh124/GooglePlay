@@ -1,16 +1,21 @@
 package com.heima.googleplay.fragment;
 
-import android.graphics.Color;
-import android.os.SystemClock;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.AbsListView;
+import android.widget.ListView;
 
+import com.heima.googleplay.adapter.SuperBaseAdapter;
 import com.heima.googleplay.base.BaseFragment;
+import com.heima.googleplay.base.BaseHolder;
+import com.heima.googleplay.holder.CategoryNormalHolder;
+import com.heima.googleplay.holder.CategorytitleHolder;
 import com.heima.googleplay.base.LoadingPagerController;
-import com.heima.googleplay.utils.UIUtils;
+import com.heima.googleplay.bean.CategoryBean;
+import com.heima.googleplay.factory.ListViewFactory;
+import com.heima.googleplay.protocol.CategoryProtocol;
+import com.heima.googleplay.utils.LogUtils;
 
-import java.util.Random;
+import java.util.List;
 
 /**
  * Created by GuoYaHui on 2017/7/9.
@@ -18,6 +23,8 @@ import java.util.Random;
 
 public class CategoryFragment extends BaseFragment {
 
+
+    private List<CategoryBean> mCategoryBeanList;
 
     /**
      *
@@ -27,12 +34,15 @@ public class CategoryFragment extends BaseFragment {
      */
     @Override
     public LoadingPagerController.LoadedResult initData() {
-        SystemClock.sleep(2000);//模拟网络加载数据
-        Random random = new Random();
-        int i = random.nextInt(3);
-        LoadingPagerController.LoadedResult[] arr = new LoadingPagerController.LoadedResult[]{LoadingPagerController.LoadedResult.SUCCESS,
-                LoadingPagerController.LoadedResult.ERROR,LoadingPagerController.LoadedResult.EMPTY};
-        return arr[i];//数据加载成功
+        CategoryProtocol categoryProtocol = new CategoryProtocol();
+        try {
+            mCategoryBeanList = categoryProtocol.loadData(0);
+            LogUtils.printList(mCategoryBeanList);
+            return checkResult(mCategoryBeanList);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return LoadingPagerController.LoadedResult.ERROR;
+        }
     }
 
     /**
@@ -43,10 +53,40 @@ public class CategoryFragment extends BaseFragment {
      */
     @Override
     public View initSuccessView() {
-        TextView successView = new TextView(UIUtils.getContext());
-        successView.setGravity(Gravity.CENTER);
-        successView.setText(getClass().getSimpleName());
-        successView.setTextColor(Color.BLACK);
-        return successView;
+        ListView listView = ListViewFactory.createListView();
+        listView.setAdapter(new CategoryAdapter(mCategoryBeanList,listView));
+        return listView;
+    }
+    class CategoryAdapter extends SuperBaseAdapter<CategoryBean>{
+        public CategoryAdapter(List<CategoryBean> datas, AbsListView absListView) {
+            super(datas, absListView);
+        }
+
+        @Override
+        public BaseHolder getSpecialBaseHolder(int i) {
+            CategoryBean categoryBean = mCategoryBeanList.get(i);
+            if (categoryBean.isTitle){
+                return new CategorytitleHolder();
+            }else {
+                return new CategoryNormalHolder();
+            }
+
+        }
+
+        @Override
+        public int getViewTypeCount() {
+            return super.getViewTypeCount()+1;
+        }
+
+        @Override
+        public int getNormalItemViewType(int position) {
+            CategoryBean categoryBean = mCategoryBeanList.get(position);
+            if (categoryBean.isTitle){
+                return 1;
+            }else {
+                return 2;
+            }
+
+        }
     }
 }

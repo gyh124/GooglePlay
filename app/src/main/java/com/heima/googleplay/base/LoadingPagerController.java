@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.heima.googleplay.R;
+import com.heima.googleplay.factory.ThreadPoolProxyFactory;
 import com.heima.googleplay.utils.UIUtils;
 
 /**
@@ -104,7 +105,8 @@ public abstract class LoadingPagerController extends FrameLayout {
                 mCurState = STATE_LOADING;
                 refreshViewByState();
                 mLoadDataTask = new LoadDataTask();
-                new Thread(mLoadDataTask).start();
+//                new Thread(mLoadDataTask).start();
+                ThreadPoolProxyFactory.getNormalThreadPoolProxy().submit(mLoadDataTask);
             }
         }
 

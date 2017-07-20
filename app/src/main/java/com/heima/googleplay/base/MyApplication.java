@@ -5,6 +5,10 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Process;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 /**
  * Created by GuoYaHui on 2017/7/8.
  */
@@ -15,6 +19,15 @@ public class MyApplication extends Application {
     private static Context mContext;
     private static Handler mMainThreadHandler;
     private static int mMainThreadId;
+    private Map<String,String> mMemCacheMap = new HashMap<>();
+
+    /**
+     *
+     * @return 获得内存缓存的集合
+     */
+    public Map<String, String> getMemCacheMap() {
+        return mMemCacheMap;
+    }
 
     @Override
     public void onCreate() {

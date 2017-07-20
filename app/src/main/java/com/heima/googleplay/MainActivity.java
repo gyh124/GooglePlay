@@ -1,7 +1,6 @@
 package com.heima.googleplay;
 
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -13,7 +12,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.ViewTreeObserver;
-
 
 import com.astuetz.PagerSlidingTabStripExtends;
 import com.heima.googleplay.base.BaseFragment;
@@ -169,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setDisplayShowHomeEnabled(true);
         //显示返回按钮
         actionBar.setDisplayHomeAsUpEnabled(true);
+
     }
 
     @Override

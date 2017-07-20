@@ -13,9 +13,7 @@ import android.view.ViewGroup;
 
 public abstract class BaseFragmentCommon extends Fragment {
     /**
-     *
-     * @param savedInstanceState
-     * fragment被创建
+     * @param savedInstanceState fragment被创建
      */
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,9 +22,7 @@ public abstract class BaseFragmentCommon extends Fragment {
     }
 
 
-
     /**
-     *
      * @param inflater
      * @param container
      * @param savedInstanceState
@@ -39,11 +35,8 @@ public abstract class BaseFragmentCommon extends Fragment {
     }
 
 
-
     /**
-     *
-     * @param savedInstanceState
-     * 宿主activity被创建
+     * @param savedInstanceState 宿主activity被创建
      */
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -55,7 +48,7 @@ public abstract class BaseFragmentCommon extends Fragment {
     /**
      * 初始化fragment里面相关的监听，不知道如何具体添加事件的相关监听，交给子类实现，子类选择性实现
      */
-    public void initListener(){
+    public void initListener() {
 
     }
 
@@ -63,7 +56,7 @@ public abstract class BaseFragmentCommon extends Fragment {
      * 初始化fragment数据的加载
      * 不知道如何具体进行数据的加载，交给子类实现，子类选择性实现
      */
-    public void initData(){
+    public void initData() {
 
     }
 
@@ -73,13 +66,11 @@ public abstract class BaseFragmentCommon extends Fragment {
      */
     public void init() {
     }
-    
+
     /**
-     *
-     * @return
-     * 初始化视图。返回给fragment进行展示
+     * @return 初始化视图。返回给fragment进行展示
      * 在BaseFragmentCommon不知道如何具体初始化对应的视图，交给子类实现
      * 由于子类是必须实现，定义为抽象方法
      */
-    public abstract View initView() ;
+    public abstract View initView();
 }

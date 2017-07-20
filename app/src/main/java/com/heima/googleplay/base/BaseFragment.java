@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 
 import com.heima.googleplay.utils.UIUtils;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * Created by GuoYaHui on 2017/7/10.
  */
@@ -39,6 +42,27 @@ public abstract class BaseFragment extends Fragment {
         //触发加载数据
 //        loadingPagerController.triggerLoadData();
         return mLoadingPagerController;
+    }
+    /**
+     * @des 校验请求回来的数据
+     */
+    public LoadingPagerController.LoadedResult checkResult(Object resObj) {
+        if (resObj == null) {
+            return LoadingPagerController.LoadedResult.EMPTY;
+        }
+        //resObj -->List
+        if (resObj instanceof List) {
+            if (((List) resObj).size() == 0) {
+                return LoadingPagerController.LoadedResult.EMPTY;
+            }
+        }
+        //resObj -->Map
+        if (resObj instanceof Map) {
+            if (((Map) resObj).size() == 0) {
+                return LoadingPagerController.LoadedResult.EMPTY;
+            }
+        }
+        return LoadingPagerController.LoadedResult.SUCCESS;
     }
 
     /**

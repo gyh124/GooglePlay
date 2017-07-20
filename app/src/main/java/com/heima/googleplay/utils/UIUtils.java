@@ -49,4 +49,22 @@ public class UIUtils {
     public static String getPackageName(){
         return getContext().getPackageName();
     }
+    /**
+     * dp转px
+     */
+    public static int dp2px(int dp){
+        //px/dp=density
+        //获得当前手机px和dp的倍数关系
+        float density = getResources().getDisplayMetrics().density;
+        int px = (int) (dp*density+.5f);
+        return px;
+    }
+    /**
+     * px转dp
+     */
+    public static int px2dp(int px){
+        float density = getResources().getDisplayMetrics().density;
+        int dp = (int) (px/density+.5f);
+        return dp;
+    }
 }
