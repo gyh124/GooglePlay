@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/GooglePlay/!svn/ver/5/GooglePlay/app/src/main/java/com/heima/googleplay/fragment
+END
+HomeFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/src/main/java/com/heima/googleplay/fragment/HomeFragment.java
+END
+CategoryFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/src/main/java/com/heima/googleplay/fragment/CategoryFragment.java
+END
+HotFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/src/main/java/com/heima/googleplay/fragment/HotFragment.java
+END
+RecommendFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/src/main/java/com/heima/googleplay/fragment/RecommendFragment.java
+END
+SubjectFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/src/main/java/com/heima/googleplay/fragment/SubjectFragment.java
+END
+GameFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/src/main/java/com/heima/googleplay/fragment/GameFragment.java
+END
+AppFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/src/main/java/com/heima/googleplay/fragment/AppFragment.java
+END

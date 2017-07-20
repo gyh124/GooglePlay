@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/GooglePlay/!svn/ver/4/GooglePlay/app/src/main/res/layout
+END
+activity_main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/src/main/res/layout/activity_main.xml
+END
+pager_error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/src/main/res/layout/pager_error.xml
+END
+pager_loading.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/src/main/res/layout/pager_loading.xml
+END
+pager_empty.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/src/main/res/layout/pager_empty.xml
+END

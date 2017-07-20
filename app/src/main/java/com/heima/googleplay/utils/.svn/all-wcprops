@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/GooglePlay/!svn/ver/5/GooglePlay/app/src/main/java/com/heima/googleplay/utils
+END
+StringUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/GooglePlay/!svn/ver/5/GooglePlay/app/src/main/java/com/heima/googleplay/utils/StringUtils.java
+END
+LogUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/GooglePlay/!svn/ver/5/GooglePlay/app/src/main/java/com/heima/googleplay/utils/LogUtils.java
+END
+UIUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/GooglePlay/!svn/ver/5/GooglePlay/app/src/main/java/com/heima/googleplay/utils/UIUtils.java
+END
+IOUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/GooglePlay/!svn/ver/5/GooglePlay/app/src/main/java/com/heima/googleplay/utils/IOUtils.java
+END
+FileUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/GooglePlay/!svn/ver/5/GooglePlay/app/src/main/java/com/heima/googleplay/utils/FileUtils.java
+END

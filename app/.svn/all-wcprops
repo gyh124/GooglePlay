@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/GooglePlay/!svn/ver/4/GooglePlay/app
+END
+proguard-rules.pro
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/GooglePlay/!svn/ver/4/GooglePlay/app/proguard-rules.pro
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/GooglePlay/!svn/ver/4/GooglePlay/app/.gitignore
+END
+build.gradle
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/build.gradle
+END
+app.iml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/GooglePlay/!svn/ver/6/GooglePlay/app/app.iml
+END
