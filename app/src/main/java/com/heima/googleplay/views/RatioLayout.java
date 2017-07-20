@@ -26,7 +26,7 @@ public class RatioLayout extends FrameLayout {
     public void setPicRatio(float picRatio) {
         mPicRatio = picRatio;
     }
-    
+
 
     public void setRelative(int relative) {
         mRelative = relative;
