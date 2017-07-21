@@ -22,6 +22,7 @@ public class RatioLayout extends FrameLayout {
     private static final int RELATIVE_WIDTH = 0;//已知宽度,动态计算高度
     private static final int RELATIVE_HEIGHT = 1;//已知高度,动态计算宽度
     private int mRelative = RELATIVE_WIDTH;
+    
 
     public void setPicRatio(float picRatio) {
         mPicRatio = picRatio;
